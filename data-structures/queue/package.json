@@ -1,0 +1,11 @@
+{
+  "name": "Queue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "queue.js",
+  "scripts": {
+    "test": "node queue_test.js"
+  },
+  "author": "Victor Nogueira",
+  "license": "MIT"
+}
