@@ -4,7 +4,7 @@ var it = require("mocha").it;
 var Stack = require('../data-structures/stack');
 
 describe('Stack', function () {
-    it("should pass this dummy test while de developer don't write a real one", function () {
+    it("should pass this dummy test while the developer don't write a real one", function () {
         var s = new Stack();
         s.push('one');
         s.push('two');

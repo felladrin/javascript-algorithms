@@ -4,7 +4,7 @@ var it = require("mocha").it;
 var Queue = require('../data-structures/queue');
 
 describe('Queue', function () {
-    it("should pass this dummy test while de developer don't write a real one", function () {
+    it("should pass this dummy test while the developer don't write a real one", function () {
         var q = new Queue();
         q.enqueue('one');
         q.enqueue('two');
