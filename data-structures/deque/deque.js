@@ -4,6 +4,26 @@ function Deque() {
 }
 
 /**
+ * @param {object} item The item to be put at the beginning of the deque.
+ */
+Deque.prototype.enqueueFront = function (item) {
+    var reindexItems = [];
+    reindexItems[0] = item;
+    for (var i = 0; i < this.length; i++) {
+        reindexItems[i + 1] = this.items[i];
+    }
+    this.items = reindexItems;
+    this.length++;
+};
+
+/**
+ * @param {object} item The item to be put at the end of the deque.
+ */
+Deque.prototype.enqueueBack = function (item) {
+    this.items[this.length++] = item;
+};
+
+/**
  * @returns {object} item The deleted item, which was previous at the beginning of the deque.
  */
 Deque.prototype.dequeueFront = function () {
@@ -15,19 +35,6 @@ Deque.prototype.dequeueFront = function () {
     this.items = reindexItems;
     this.length--;
     return deletedFront;
-};
-
-/**
- * @param {object} item The item to be put at the beginning of the deque.
- */
-Deque.prototype.enqueueFront = function (item) {
-    var reindexItems = [];
-    reindexItems[0] = item;
-    for (var i = 0; i < this.length; i++) {
-        reindexItems[i + 1] = this.items[i];
-    }
-    this.items = reindexItems;
-    this.length++;
 };
 
 /**
@@ -43,14 +50,6 @@ Deque.prototype.dequeueBack = function () {
     this.length--;
     return deletedBack;
 };
-
-/**
- * @param {object} item The item to be put at the end of the deque.
- */
-Deque.prototype.enqueueBack = function (item) {
-    this.items[this.length++] = item;
-};
-
 
 /**
  * @returns {object} item The item which is at the beginning of the deque.
