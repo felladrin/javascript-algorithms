@@ -1,0 +1,16 @@
+{
+  "name": "javascript-algorithms",
+  "author": "Victor Nogueira",
+  "version": "1.1.0",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/felladrin/javascript-algorithms"
+  },
+  "scripts": {
+    "pretest": "npm install",
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}
