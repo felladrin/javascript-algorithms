@@ -1,5 +1,5 @@
 function Stack() {
-    this.count = 0;
+    this.length = 0;
     this.items = [];
 }
 
@@ -7,14 +7,14 @@ function Stack() {
  * @param {object} item The item to be put on top of the stack.
  */
 Stack.prototype.push = function (item) {
-    this.items[this.count++] = item;
+    this.items[this.length++] = item;
 };
 
 /**
  * @returns {object} The item which is on top of the stack.
  */
 Stack.prototype.top = function () {
-    return this.items[this.count - 1];
+    return this.items[this.length - 1];
 };
 
 /**
@@ -23,11 +23,11 @@ Stack.prototype.top = function () {
 Stack.prototype.pop = function () {
     var deletedTop = this.top();
     var reindexItems = [];
-    for (var i = 0; i < (this.count - 1); i++) {
+    for (var i = 0; i < (this.length - 1); i++) {
         reindexItems[i] = this.items[i];
     }
     this.items = reindexItems;
-    this.count--;
+    this.length--;
     return deletedTop;
 };
 
@@ -35,14 +35,14 @@ Stack.prototype.pop = function () {
  * @returns {number} The current number of items on the stack.
  */
 Stack.prototype.size = function () {
-    return this.count;
+    return this.length;
 };
 
 /**
  * @returns {boolean} Whether the stack is empty or not.
  */
 Stack.prototype.isEmpty = function () {
-    return (this.count === 0);
+    return (this.length === 0);
 };
 
 /**
@@ -50,7 +50,7 @@ Stack.prototype.isEmpty = function () {
  */
 Stack.prototype.toString = function () {
     var result = '[';
-    var lastItemKey = this.count - 1;
+    var lastItemKey = this.length - 1;
     for (var i = 0; i < lastItemKey; i++) {
         result += this.items[i] + ', ';
     }
