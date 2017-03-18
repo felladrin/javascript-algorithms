@@ -7,8 +7,7 @@ function Stack() {
  * @param {object} item The item to be put on top of the stack.
  */
 Stack.prototype.push = function (item) {
-    this.items[this.count] = item;
-    this.count++;
+    this.items[this.count++] = item;
 };
 
 /**
@@ -51,11 +50,12 @@ Stack.prototype.isEmpty = function () {
  */
 Stack.prototype.toString = function () {
     var result = '[';
-    for (var i = 0; i < (this.count - 1); i++) {
+    var lastItemKey = this.count - 1;
+    for (var i = 0; i < lastItemKey; i++) {
         result += this.items[i] + ', ';
     }
-    if (this.items[this.count - 1]) {
-        result += this.items[this.count - 1];
+    if (this.items[lastItemKey]) {
+        result += this.items[lastItemKey];
     }
     result += ']';
     return result;
