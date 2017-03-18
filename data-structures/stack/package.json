@@ -1,0 +1,11 @@
+{
+  "name": "Stack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "stack.js",
+  "scripts": {
+    "test": "node stack_test.js"
+  },
+  "author": "Victor Nogueira",
+  "license": "MIT"
+}
