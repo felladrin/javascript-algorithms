@@ -1,17 +1,19 @@
 var Stack = require('./stack');
 
-var q = new Stack();
-q.push('one');
-q.push('two');
-q.push('three');
+var s = new Stack();
+s.push('one');
+s.push('two');
+s.push('three');
 
-console.log(q.size());
-console.log(q.top());
-console.log(q.pop());
-console.log(q.pop());
-console.log(q.top());
-console.log(q.isEmpty());
-console.log(q.pop());
-console.log(q.top());
-console.log(q.size());
-console.log(q.isEmpty());
+console.log(s.size());
+console.log(s.top());
+console.log(s.toString());
+console.log(s.pop());
+console.log(s.pop());
+console.log(s.top());
+console.log(s.isEmpty());
+console.log(s.pop());
+console.log(s.top());
+console.log(s.size());
+console.log(s.isEmpty());
+console.log(s.toString());
