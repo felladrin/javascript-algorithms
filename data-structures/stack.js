@@ -1,3 +1,5 @@
+"use strict";
+
 function Stack() {
     this.length = 0;
     this.items = [];
@@ -21,9 +23,9 @@ Stack.prototype.top = function () {
  * @returns {object} The deleted item, which was previous on top of the stack.
  */
 Stack.prototype.pop = function () {
-    var deletedTop = this.top();
-    var reindexItems = [];
-    for (var i = 0; i < (this.length - 1); i++) {
+    const deletedTop = this.top();
+    const reindexItems = [];
+    for (let i = 0; i < (this.length - 1); i++) {
         reindexItems[i] = this.items[i];
     }
     this.items = reindexItems;
@@ -49,9 +51,9 @@ Stack.prototype.isEmpty = function () {
  * @returns {string} The string representation of the stack.
  */
 Stack.prototype.toString = function () {
-    var result = '[';
-    var lastItemKey = this.length - 1;
-    for (var i = 0; i < lastItemKey; i++) {
+    let result = '[';
+    const lastItemKey = this.length - 1;
+    for (let i = 0; i < lastItemKey; i++) {
         result += this.items[i] + ', ';
     }
     if (this.items[lastItemKey]) {

@@ -1,11 +1,11 @@
-var assert = require('assert');
-var describe = require("mocha").describe;
-var it = require("mocha").it;
-var Queue = require('../data-structures/queue');
+"use strict";
+
+const assert = require('assert');
+const Queue = require('../data-structures/queue');
 
 describe('Queue', function () {
     it("should pass this dummy test while the developer don't write a real one", function () {
-        var q = new Queue();
+        let q = new Queue();
         q.enqueue('one');
         q.enqueue('two');
         q.enqueue('three');

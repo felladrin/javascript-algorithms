@@ -1,3 +1,5 @@
+"use strict";
+
 function Queue() {
     this.length = 0;
     this.items = [];
@@ -21,9 +23,9 @@ Queue.prototype.front = function () {
  * @returns {object} item The deleted item, which was previous head of the queue.
  */
 Queue.prototype.dequeue = function () {
-    var deletedFront = this.front();
-    var reindexItems = [];
-    for (var i = 1; i < this.length; i++) {
+    const deletedFront = this.front();
+    const reindexItems = [];
+    for (let i = 1; i < this.length; i++) {
         reindexItems[i - 1] = this.items[i];
     }
     this.items = reindexItems;
@@ -49,9 +51,9 @@ Queue.prototype.isEmpty = function () {
  * @returns {string} The string representation of the queue.
  */
 Queue.prototype.toString = function () {
-    var result = '[';
-    var lastItemKey = this.length - 1;
-    for (var i = 0; i < lastItemKey; i++) {
+    let result = '[';
+    const lastItemKey = this.length - 1;
+    for (let i = 0; i < lastItemKey; i++) {
         result += this.items[i] + ', ';
     }
     if (this.items[lastItemKey]) {

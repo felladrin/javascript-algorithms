@@ -1,3 +1,5 @@
+"use strict";
+
 function Deque() {
     this.length = 0;
     this.items = [];
@@ -7,9 +9,9 @@ function Deque() {
  * @param {object} item The item to be put at the beginning of the deque.
  */
 Deque.prototype.enqueueFront = function (item) {
-    var reindexItems = [];
+    const reindexItems = [];
     reindexItems[0] = item;
-    for (var i = 0; i < this.length; i++) {
+    for (let i = 0; i < this.length; i++) {
         reindexItems[i + 1] = this.items[i];
     }
     this.items = reindexItems;
@@ -27,9 +29,9 @@ Deque.prototype.enqueueBack = function (item) {
  * @returns {object} item The deleted item, which was previous at the beginning of the deque.
  */
 Deque.prototype.dequeueFront = function () {
-    var deletedFront = this.front();
-    var reindexItems = [];
-    for (var i = 1; i < this.length; i++) {
+    const deletedFront = this.front();
+    const reindexItems = [];
+    for (let i = 1; i < this.length; i++) {
         reindexItems[i - 1] = this.items[i];
     }
     this.items = reindexItems;
@@ -41,9 +43,9 @@ Deque.prototype.dequeueFront = function () {
  * @returns {object} item The deleted item, which was previous at the end of the deque.
  */
 Deque.prototype.dequeueBack = function () {
-    var deletedBack = this.back();
-    var reindexItems = [];
-    for (var i = 0; i < (this.length - 1); i++) {
+    const deletedBack = this.back();
+    const reindexItems = [];
+    for (let i = 0; i < (this.length - 1); i++) {
         reindexItems[i] = this.items[i];
     }
     this.items = reindexItems;
@@ -83,9 +85,9 @@ Deque.prototype.isEmpty = function () {
  * @returns {string} The string representation of the deque.
  */
 Deque.prototype.toString = function () {
-    var result = '[';
-    var lastItemKey = this.length - 1;
-    for (var i = 0; i < lastItemKey; i++) {
+    let result = '[';
+    const lastItemKey = this.length - 1;
+    for (let i = 0; i < lastItemKey; i++) {
         result += this.items[i] + ', ';
     }
     if (this.items[lastItemKey]) {

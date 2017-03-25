@@ -1,10 +1,10 @@
-var assert = require('assert');
-var describe = require("mocha").describe;
-var it = require("mocha").it;
-var Deque = require('../data-structures/deque');
+"use strict";
+
+const assert = require('assert');
+const Deque = require('../data-structures/deque');
 
 describe('Deque', function () {
-    var d = new Deque();
+    let d = new Deque();
 
     it('should have 4 elements after adding earth (front), water (back), air (front), and fire (front)', function () {
         d.enqueueFront('earth');

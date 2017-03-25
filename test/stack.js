@@ -1,11 +1,11 @@
-var assert = require('assert');
-var describe = require("mocha").describe;
-var it = require("mocha").it;
-var Stack = require('../data-structures/stack');
+"use strict";
+
+const assert = require('assert');
+const Stack = require('../data-structures/stack');
 
 describe('Stack', function () {
     it("should pass this dummy test while the developer don't write a real one", function () {
-        var s = new Stack();
+        let s = new Stack();
         s.push('one');
         s.push('two');
         s.push('three');
