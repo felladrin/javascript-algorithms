@@ -1,6 +1,6 @@
 "use strict";
 
-const assert = require('assert');
+const assert = require('chai').assert;
 const Stack = require('../data-structures/stack');
 
 describe('Stack', function () {

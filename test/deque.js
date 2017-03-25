@@ -1,6 +1,6 @@
 "use strict";
 
-const assert = require('assert');
+const assert = require('chai').assert;
 const Deque = require('../data-structures/deque');
 
 describe('Deque', function () {
