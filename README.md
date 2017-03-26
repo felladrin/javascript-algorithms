@@ -12,6 +12,7 @@ Practice sessions of javascript algorithms.
 - Sorting Algorithms:
   - Bubble Sort
   - Bucket Sort
+  - Comb Sort
 
 ## Testing
 
