@@ -9,6 +9,10 @@ Practice sessions of javascript algorithms.
   - Queue
   - Stack
 
+- Sorting Algorithms:
+  - Bubble Sort
+  - Bucket Sort
+
 ## Testing
 
 To test the scripts, just download this repo and execute:
