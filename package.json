@@ -10,6 +10,9 @@
     "pretest": "npm install",
     "test": "mocha"
   },
+  "dependencies": {
+    "require-all": "^2.2.0"
+  },
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.2.0"
