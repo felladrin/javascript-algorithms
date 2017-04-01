@@ -5,25 +5,25 @@
  * @constructor
  */
 function CombSort(vector) {
-    const size = vector.length;
-    const shrink_factor = 1.247330950103979;
-    let gap = size;
-    let finishedSorting = false;
+    const shrinkFactor = 1.3;
+    let gap = vector.length;
+    let isSorted = false;
 
-    while ((gap > 1) || !finishedSorting) {
+    while (!isSorted || gap > 1) {
+        isSorted = true;
+
         if (gap > 1) {
-            gap = parseInt(gap / shrink_factor);
+            gap = parseInt(gap / shrinkFactor);
         }
 
-        finishedSorting = true;
+        for (let i = 0; i + gap < vector.length; i++) {
+            let currentElement = vector[i];
+            let nextElement = vector[i + gap];
 
-        for (let i = 0; (gap + i) < size; i++) {
-            let a = vector[i];
-            let b = vector[i + gap];
-            if (a - b > 0) {
-                vector[i] = b;
-                vector[i + gap] = a;
-                finishedSorting = false;
+            if (nextElement < currentElement) {
+                vector[i] = nextElement;
+                vector[i + gap] = currentElement;
+                isSorted = false;
             }
         }
     }
