@@ -5,23 +5,20 @@
  * @constructor
  */
 function BubbleSort(vector) {
-    let lastIndex = vector.length - 1;
+    let isSorted = false;
 
-    for (let j = 0; j < lastIndex; j++) {
-        let finishedSorting = true;
+    while (!isSorted) {
+        isSorted = true;
 
-        for (let i = 0; i < lastIndex; i++) {
-            if (vector[i + 1] < vector[i]) {
-                const holder = vector[i];
-                vector[i] = vector[i + 1];
-                vector[i + 1] = holder;
-                finishedSorting = false;
+        vector.forEach(function (currentElement, i) {
+            let nextElement = vector[i + 1];
+
+            if (nextElement < currentElement) {
+                vector[i] = nextElement;
+                vector[i + 1] = currentElement;
+                isSorted = false;
             }
-        }
-
-        if (finishedSorting) {
-            break;
-        }
+        });
     }
 }
 
