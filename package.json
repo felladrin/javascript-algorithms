@@ -6,6 +6,9 @@
   "repository": {
     "url": "https://github.com/felladrin/javascript-algorithms"
   },
+  "engines": {
+    "node": ">= 6.10.0"
+  },
   "scripts": {
     "pretest": "npm install",
     "test": "mocha"
