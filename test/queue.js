@@ -3,8 +3,8 @@
 const assert = require('chai').assert;
 const Queue = require('../data-structures/queue');
 
-describe('Queue', function () {
-    it("should pass this dummy test while the developer don't write a real one", function () {
+describe('Queue', () => {
+    it("should pass this dummy test while the developer don't write a real one", () => {
         let q = new Queue();
         q.enqueue('one');
         q.enqueue('two');

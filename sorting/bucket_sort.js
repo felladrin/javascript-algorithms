@@ -9,11 +9,9 @@ const sort = require('./javascript_sort');
 function BucketSort(vector) {
     const bucketsFactor = 5;
     const totalBuckets = Math.max(parseInt(vector.length / bucketsFactor), 1);
-    const buckets = new Array(totalBuckets).fill(null).map(function () {
-        return [];
-    });
+    const buckets = new Array(totalBuckets).fill(null).map(() => []);
 
-    vector.forEach(function (element) {
+    vector.forEach(element => {
         for (let i = (totalBuckets - 1); i >= 0; i--) {
             if (element >= i * bucketsFactor) {
                 buckets[i].push(element);
@@ -24,9 +22,9 @@ function BucketSort(vector) {
 
     let j = 0;
 
-    buckets.forEach(function (bucket) {
+    buckets.forEach(bucket => {
         sort(bucket);
-        bucket.forEach(function (element) {
+        bucket.forEach(element => {
             vector[j++] = element;
         });
     });

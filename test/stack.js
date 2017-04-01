@@ -3,8 +3,8 @@
 const assert = require('chai').assert;
 const Stack = require('../data-structures/stack');
 
-describe('Stack', function () {
-    it("should pass this dummy test while the developer don't write a real one", function () {
+describe('Stack', () => {
+    it("should pass this dummy test while the developer don't write a real one", () => {
         let s = new Stack();
         s.push('one');
         s.push('two');

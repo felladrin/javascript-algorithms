@@ -10,7 +10,7 @@ function BubbleSort(vector) {
     while (!isSorted) {
         isSorted = true;
 
-        vector.forEach(function (currentElement, i) {
+        vector.forEach((currentElement, i) => {
             let nextElement = vector[i + 1];
 
             if (nextElement < currentElement) {

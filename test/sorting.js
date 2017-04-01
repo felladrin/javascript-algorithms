@@ -6,12 +6,12 @@ const getRandomIntArray = require('../helpers/get_random_int_array');
 const cloneArray = require('../helpers/clone_array');
 const sortingAlgorithms = require('require-all')({dirname: __dirname + '/../sorting'});
 
-Object.keys(sortingAlgorithms).forEach(function (key) {
+Object.keys(sortingAlgorithms).forEach(key => {
     let sortingAlgorithm = sortingAlgorithms[key];
-    describe(sortingAlgorithm.name, function () {
-        getRandomIntArray(5, 8, 64).forEach(function (length) {
+    describe(sortingAlgorithm.name, () => {
+        getRandomIntArray(5, 8, 64).forEach(length => {
             let vector = getRandomIntArray(length, 1, 100);
-            it("should correctly sort " + vector.toString(), function () {
+            it("should correctly sort " + vector.toString(), () => {
                 let expected = cloneArray(vector);
                 JavascriptSort(expected);
 

@@ -5,9 +5,7 @@
  * @constructor
  */
 function JavascriptSort(vector) {
-    vector.sort(function (a, b) {
-        return a - b;
-    });
+    vector.sort((a, b) => a - b);
 }
 
 module.exports = JavascriptSort;
