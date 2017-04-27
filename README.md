@@ -14,6 +14,9 @@ Practice sessions of javascript algorithms.
   - Bucket Sort
   - Comb Sort
 
+- Problems:
+  - Change-Making (Greedy Algorithm)
+
 ## Testing
 
 To test the scripts, just download this repo and execute:
